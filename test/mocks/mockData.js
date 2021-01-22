@@ -773,3 +773,18 @@ let carsData =
       }
     }
   ];
+
+var singleCarDetail = {
+  "warehouseName": "Warehouse A",
+  "location": {
+    "name": "West wing",
+    "latitude": "47.13111",
+    "longitude": "-61.54801"
+  },
+  "company": "Volkswagen",
+  "model": "Jetta III",
+  "yearModel": 1995,
+  "price": 12947.52,
+  "licensed": true,
+  "dateAdded": "2018-09-18"
+};

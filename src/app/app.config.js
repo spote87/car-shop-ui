@@ -11,6 +11,10 @@ app.config([
       });
   }]);
 
+app.config(['$qProvider', function ($qProvider) {
+  $qProvider.errorOnUnhandledRejections(false);
+}]);
+
 app.constant('ConfigurationService', getAppConstants());
 
 function getAppConstants() {

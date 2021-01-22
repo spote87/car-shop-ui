@@ -18,7 +18,8 @@ module.exports = function (grunt) {
           'src/dist/app/app.min.js': [
             'src/app/app.module.js',
             'src/app/app.config.js',
-            'src/app/controllers/**/*.js']
+            'src/app/controllers/**/*.js',
+            'src/app/services/**/*.js']
           // 'src/app/app.controller.js',
           // 'src/app/components/**/*.js',
           // 'src/app/states/**/*.js']

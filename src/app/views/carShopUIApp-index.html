@@ -32,8 +32,8 @@
           </tr>
           </thead>
           <tbody>
-          <tr
-            ng-class="{ 'text-white bg-info': item == selected }"
+          <tr ng-click="appController.showCarDetails(item)"
+            ng-class="{ 'text-white bg-info': item == appController.selected }"
             ng-repeat="item in appController.allCars | orderBy : appController.orderByField:appController.sortByDescending | limitTo:appController.itemsPerPage:appController.itemsPerPage*(appController.currentPage-1)">
             <td class="text-underline cursor-pointer" ng-repeat="header in appController.carHeaders">
               {{item[header.id]}}

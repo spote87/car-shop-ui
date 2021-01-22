@@ -1,0 +1,51 @@
+<div>
+  <div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Car Details</h3>
+  </div>
+  <div class="modal-body" id="modal-body">
+
+    <table class="table table-hover table-bordered">
+      <tbody>
+      <tr>
+        <th scope="row">Warehouse Name</th>
+        <td>{{carDetailsCtrl.seletedCar.warehouseName}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Location</th>
+        <td>@{{carDetailsCtrl.seletedCar.location.name}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Company Name</th>
+        <td>{{carDetailsCtrl.seletedCar.company}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Car Model</th>
+        <td>{{carDetailsCtrl.seletedCar.model}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Year Of Model</th>
+        <td>{{carDetailsCtrl.seletedCar.yearModel}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Car Price</th>
+        <td>{{carDetailsCtrl.seletedCar.price}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Licence</th>
+        <td>{{carDetailsCtrl.seletedCar.licensed?'Available':'Not Available'}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Date Added In Inventory</th>
+        <td>{{carDetailsCtrl.seletedCar.dateAdded}}</td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <div class="modal-footer">
+    <button class="btn btn-primary" ng-click="carDetailsCtrl.ok()" type="button">Add to Cart</button>
+    <button class="btn btn-warning" ng-click="carDetailsCtrl.cancel()" type="button">Cancel</button>
+  </div>
+</div>
+</div>
