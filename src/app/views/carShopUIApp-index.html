@@ -1,0 +1,49 @@
+<div ng-controller="AppController as appController">
+  <div class="container bg-transparent border border-success">
+    <div class="row text-center bg-success">
+      <div class="col-md-auto">
+        <h1 class="font-weight-bold text-warning">Frank's Car Shop</h1>
+      </div>
+    </div>
+    <div>
+      <button class="btn btn-link" ng-click="appController.showHome()" type="button">Home</button>
+    </div>
+
+    <div class="panel panel-warning">
+      <div class="panel-heading"><span>Available Cars</span></div>
+      </hr>
+      <div class="padding-md">
+        <table class="table table-bordered table-hover">
+          <thead>
+          <tr>
+            <th ng-repeat="header in appController.carHeaders">
+              <a href="#" ng-click="appController.sortColumn(header.id)">
+                <span class="text-uppercase">{{header.label}}</span>
+                <span ng-show="appController.orderByField == header.id">
+                    <span ng-show="!appController.sortByDescending">
+                    <i class="fas fa-angle-up"></i>
+                    </span>
+                    <span ng-show="appController.sortByDescending">
+                    <i class="fas fa-angle-down"></i>
+                    </span>
+                  </span>
+              </a>
+            </th>
+          </tr>
+          </thead>
+          <tbody>
+          <!--          <tr ng-click="openModal(item)" ng-repeat="item in appController.allCars = (data | filter: filterText | orderBy : appController.orderByField : appController.sortByDescending) | limitTo:appController.itemsPerPage:appController.itemsPerPage*(appController.currentPage-1)" ng-class="{ 'text-white bg-info': item == selected }">-->
+          <tr
+            ng-class="{ 'text-white bg-info': item == selected }"
+            ng-repeat="item in appController.allCars | limitTo:appController.itemsPerPage:appController.itemsPerPage*(appController.currentPage-1)">
+
+            <td class="text-underline cursor-pointer" ng-repeat="header in appController.carHeaders">
+              {{item[header.id]}}
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

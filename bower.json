@@ -1,0 +1,21 @@
+{
+  "name": "travel-price-engine-app",
+  "version": "0.1.0",
+  "ignore": [
+    "analytics",
+    "node_modules",
+    "vendor",
+    "test",
+    "docs"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "angular": "~1.7.4",
+    "angular-bootstrap": "~0.6.0",
+    "angular-mocks": "~1.7.4",
+    "angular-sanitize": "^1.7.5"
+  },
+  "resolutions": {
+    "angular": "~1.7.4"
+  }
+}
