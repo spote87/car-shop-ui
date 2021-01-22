@@ -34,6 +34,8 @@ angular.module('carShopUIApp')
     };
 
     function init() {
+      _this.sortByDescending = false;
+      _this.orderByField='dateAdded';
       loadCars();
     }
 

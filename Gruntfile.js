@@ -114,6 +114,15 @@ module.exports = function (grunt) {
         dest: 'src/dist/lib',
         filter: 'isFile'
       },
+      fonts: {
+        expand: true,
+        cwd: 'bower_components/bootstrap',
+        src: [
+          'fonts/glyphicons-halflings-regular.woff2'
+        ],
+        dest: 'src/dist/app',
+        filter: 'isFile'
+      },
       mock: {
         expand: true,
         cwd: 'test/',
