@@ -14,7 +14,7 @@ angular.module('carShopUIApp')
       }
 
       vm.ok = function () {
-        $uibModalInstance.close(selectedItem);
+        $uibModalInstance.close(vm.seletedCar);
       };
 
       vm.cancel = function () {

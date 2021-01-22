@@ -776,6 +776,8 @@ let carsData =
 
 var singleCarDetail = {
   "warehouseName": "Warehouse A",
+  "warehouseId": 100,
+  "carId": 101,
   "location": {
     "name": "West wing",
     "latitude": "47.13111",
@@ -788,3 +790,10 @@ var singleCarDetail = {
   "licensed": true,
   "dateAdded": "2018-09-18"
 };
+
+var orderData = {
+  "username": "spote",
+  "items": [{"model": "Jetta III", "price": 12947.52, "warehouseId": 100, "carId": 101, "$$hashKey": "object:91"}],
+  "totalAmount": 12947.52
+};
+

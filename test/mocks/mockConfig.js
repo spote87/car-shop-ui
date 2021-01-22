@@ -11,4 +11,5 @@ angular.module('carShopUIAppMock', ['ngMockE2E']).run(function ($httpBackend) {
   $httpBackend.whenGET(function (url){
     return SERVICE_URI+'/warehouse/'+/^\d+$/+'/car/'+/^\d+$/.test(url);
   }).respond(200, singleCarDetail, contentTypeJson);
+  $httpBackend.whenPOST(SERVICE_URI+'/order').respond(200,{orderId:100},contentTypeJson);
 });

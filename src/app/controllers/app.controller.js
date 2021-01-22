@@ -9,7 +9,6 @@ angular.module('carShopUIApp')
         // Selection
         vm.selected = undefined;
 
-
         vm.carHeaders = [
           {id: 'name', label: 'Car Name'},
           {id: 'model', label: 'Car Model'},
@@ -25,8 +24,10 @@ angular.module('carShopUIApp')
         vm.showCarDetails = function (selectedCar) {
           vm.selected = selectedCar;
           if (!vm.selected || vm.selected.licenced == 'NO'){
+            vm.error = 'This car is not licenced. So you cannot view/buy it!!';
             return;
           }
+          vm.error='';
           var modalInstance = $uibModal.open({
             animation: true,
             ariaLabelledBy: 'Car Details',
@@ -50,6 +51,15 @@ angular.module('carShopUIApp')
               console.log('closing modal');
             }
           );
+        };
+
+        vm.showCart = function () {
+          vm.cart = true;
+          vm.home= false;
+        };
+        vm.showHome = function () {
+          vm.cart = false;
+          vm.home= true;
         };
 
         function loadCars() {
@@ -77,6 +87,7 @@ angular.module('carShopUIApp')
         function init() {
           vm.sortByDescending = false;
           vm.orderByField = 'dateAdded';
+          vm.showHome();
           loadCars();
         }
 
