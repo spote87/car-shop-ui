@@ -36,7 +36,6 @@
           <tr
             ng-class="{ 'text-white bg-info': item == selected }"
             ng-repeat="item in appController.allCars | limitTo:appController.itemsPerPage:appController.itemsPerPage*(appController.currentPage-1)">
-
             <td class="text-underline cursor-pointer" ng-repeat="header in appController.carHeaders">
               {{item[header.id]}}
             </td>
@@ -44,6 +43,8 @@
           </tbody>
         </table>
       </div>
+      <ul boundary-link-numbers="3" class="d-flex justify-content-center" items-per-page="appController.itemsPerPage" max-size="appController.itemsPerPage"
+          ng-model="appController.currentPage" total-items="appController.allCars.length" uib-pagination></ul>
     </div>
   </div>
 </div>

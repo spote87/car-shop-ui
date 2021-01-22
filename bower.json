@@ -12,6 +12,7 @@
   "devDependencies": {
     "angular": "~1.7.4",
     "angular-bootstrap": "~0.6.0",
+    "bootstrap": "^3.2.0",
     "angular-mocks": "~1.7.4",
     "angular-sanitize": "^1.7.5"
   },
