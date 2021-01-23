@@ -11,13 +11,15 @@ angular.module('carShopUIApp')
     };
 
     vm.submitOrder = function (){
-
+      if (!vm.username) {
+        vm.error = 'Invalid username. Please enter valid username.';
+        return;
+      }
       var data = {
         username:vm.username,
         items : vm.items,
         totalAmount: vm.totalAmount
       };
-      console.log(JSON.stringify(data));
       $http.post(ConfigurationService.SERVICE_URI + '/order',JSON.stringify(data)).then(function (response){
         vm.items = [];
         vm.checkedOut = true;

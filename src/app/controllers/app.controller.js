@@ -44,7 +44,6 @@ angular.module('carShopUIApp')
           // Modal Instance
           modalInstance.result.then(
             function (selected) {
-              //vm.selected = selected;
               AppService.addToCart(selected);
             },
             function () {
