@@ -62,7 +62,7 @@ angular.module('carShopUIApp')
         };
 
         function loadCars() {
-          $http.get(ConfigurationService.SERVICE_URI + '/cars').then(function (response) {
+          $http.get(ConfigurationService.SERVICE_URI + '/warehouses').then(function (response) {
             //vm.allCars = response.data;
             response.data.map(function (item) {
               var wareHouseId = item._id;

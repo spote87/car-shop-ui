@@ -775,21 +775,22 @@ let carsData =
   ];
 
 var singleCarDetail = {
-  "warehouseName": "Warehouse A",
-  "warehouseId": 100,
-  "carId": 101,
-  "location": {
-    "name": "West wing",
-    "latitude": "47.13111",
-    "longitude": "-61.54801"
-  },
-  "company": "Volkswagen",
-  "model": "Jetta III",
-  "yearModel": 1995,
-  "price": 12947.52,
-  "licensed": true,
-  "dateAdded": "2018-09-18"
-};
+    "warehouseName": "Warehouse A",
+    "warehouseId": 100,
+    "carId": 101,
+    "location": {
+      "name": "West wing",
+      "lat": "47.13111",
+      "long": "-61.54801"
+    },
+    "make": "Volkswagen",
+    "model": "Jetta III",
+    "year_model": 1995,
+    "price": 12947.52,
+    "licensed": true,
+    "date_added": "2018-09-18"
+  }
+;
 
 var orderData = {
   "username": "spote",
