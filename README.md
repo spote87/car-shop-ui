@@ -26,10 +26,12 @@
 
 ###### **Functionality** 
 On home page, application shows available cars in Frank's Garage. User can click on any car which has valid licence.
-New dialog will open where user can see more details about selected car. Also he/she can _add that car to the cart_. However, they cannot buy cars with invalid licence.
+New dialog will open where user can see more details about a selected car. Also, he/she can _add that car to the cart_. However, they cannot buy cars with invalid licence.
 
 Once user is done with shopping, he/she can go to cart by clicking on _**Go To Cart**_ on top right corner.
 User can click on **Checkout** button where he needs to fill username in order to place an order. Once username is provided and **Submit** button is clicked, user will see success message along with order id.
 
-If there are no items in shopping cart, user will see proper message on *S*hopping Cart page. 
+#### **NOTE**: Order submission backend APIs mocked so everytime you place order, you will always see same message with same order id i.e : 100.
+
+If there are no items in shopping cart, user will see a proper message on *S*hopping Cart page. 
 
